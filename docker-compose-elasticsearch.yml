@@ -1,0 +1,28 @@
+version: '2'
+services:
+  elasticsearch-node1:
+    image: bitnami/elasticsearch:latest
+    environment:
+      - ELASTICSEARCH_CLUSTER_NAME=elasticsearch-cluster
+      - ELASTICSEARCH_CLUSTER_HOSTS=elasticsearch-node1,elasticsearch-node2,elasticsearch-node3
+      - ELASTICSEARCH_NODE_NAME=elastic-node1
+    volumes:
+      - /bitnami/elasticsearch
+
+  elasticsearch-node2:
+    image: bitnami/elasticsearch:latest
+    environment:
+      - ELASTICSEARCH_CLUSTER_NAME=elasticsearch-cluster
+      - ELASTICSEARCH_CLUSTER_HOSTS=elasticsearch-node1,elasticsearch-node2,elasticsearch-node3
+      - ELASTICSEARCH_NODE_NAME=elastic-node2
+    volumes:
+       - /bitnami/elasticsearch
+
+   elasticsearch-node3:
+    image: bitnami/elasticsearch:latest
+    environment:
+      - ELASTICSEARCH_CLUSTER_NAME=elasticsearch-cluster
+      - ELASTICSEARCH_CLUSTER_HOSTS=elasticsearch-node1,elasticsearch-node2,elasticsearch-node3
+      - ELASTICSEARCH_NODE_NAME=elastic-node3
+    volumes:
+      - /bitnami/elasticsearch
