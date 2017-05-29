@@ -18,7 +18,7 @@ services:
     volumes:
        - /bitnami/elasticsearch
 
-   elasticsearch-node3:
+  elasticsearch-node3:
     image: bitnami/elasticsearch:latest
     environment:
       - ELASTICSEARCH_CLUSTER_NAME=elasticsearch-cluster
