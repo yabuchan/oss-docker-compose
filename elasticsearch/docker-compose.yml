@@ -6,6 +6,7 @@ services:
       - ELASTICSEARCH_CLUSTER_NAME=elasticsearch-cluster
       - ELASTICSEARCH_CLUSTER_HOSTS=elasticsearch-node1,elasticsearch-node2,elasticsearch-node3
       - ELASTICSEARCH_NODE_NAME=elastic-node1
+      - ES_JAVA_OPTS: "-Xmx512m -Xms256m"
     volumes:
       - /bitnami/elasticsearch
 
@@ -15,6 +16,7 @@ services:
       - ELASTICSEARCH_CLUSTER_NAME=elasticsearch-cluster
       - ELASTICSEARCH_CLUSTER_HOSTS=elasticsearch-node1,elasticsearch-node2,elasticsearch-node3
       - ELASTICSEARCH_NODE_NAME=elastic-node2
+      - ES_JAVA_OPTS: "-Xmx512m -Xms256m"
     volumes:
        - /bitnami/elasticsearch
 
@@ -24,5 +26,6 @@ services:
       - ELASTICSEARCH_CLUSTER_NAME=elasticsearch-cluster
       - ELASTICSEARCH_CLUSTER_HOSTS=elasticsearch-node1,elasticsearch-node2,elasticsearch-node3
       - ELASTICSEARCH_NODE_NAME=elastic-node3
+      - ES_JAVA_OPTS: "-Xmx512m -Xms256m"
     volumes:
       - /bitnami/elasticsearch
